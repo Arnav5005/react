@@ -1,0 +1,15 @@
+Tailwind is a CSS framework use to build CSS templates effectively
+
+1. cd my-project
+2. npm install tailwindcss @tailwindcss/vite
+3. Configure the Vite plugin
+
+   Add the @tailwindcss/vite plugin to your Vite configuration.
+
+   import tailwindcss from '@tailwindcss/vite'
+
+   export default defineConfig({
+     plugins: [tailwindcss(),],
+   })
+4. Add an @import to your CSS file (index.css) that imports Tailwind CSS.
+   @import "tailwindcss";
