@@ -43,11 +43,11 @@ function App() {
 
   return (
         <div
-            className='w-full min-h-screen flex flex-wrap justify-center items-center bg-cover bg-center bg-no-repeat p-4'
+            className='w-full min-h-screen bg-cover bg-center bg-no-repeat'
             style={{ backgroundImage: `url(${bgImg})` }}
         >
-            <div className="w-full">
-                <div className="w-full max-w-md mx-auto border border-gray-600/30 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+            <div className="w-full min-h-screen flex items-center justify-center p-4 bg-transparent">
+                <div className="w-full max-w-md mx-auto rounded-3xl p-6 backdrop-blur-lg bg-white/20 border border-white/30 shadow-2xl">
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
@@ -62,12 +62,13 @@ function App() {
                                 onCurrencyChange={(currency)=>setFrom(currency)} // changes the state of from i.e. changes the currency in from label
                                 onAmountChange={(amount)=>setAmount(amount)}
                                 selectCurrency={from}
+                                className="bg-white/80 border border-white/40 shadow-sm"
                             />
                         </div>
                         <div className="relative w-full h-0.5">
                             <button
                                 type="button"
-                                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+                                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-blue-600/80 text-white px-4 py-2 border border-white/20 shadow-md hover:bg-blue-600/90 transition"
                                 onClick={swap}
                             >
                                 swap
@@ -81,11 +82,12 @@ function App() {
                                 onCurrencyChange={(currency)=>setTo(currency)} // changes the state of to i.e. changes the currency in to label
                                 selectCurrency={to}
                                 amountDisable // we don't want user to be able to change the amount in the to section as this isn't possible
+                                className="bg-white/80 border border-white/40 shadow-sm"
                             />
                         </div>
                         <button 
                             type="submit" 
-                            className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg"
+                            className="w-full bg-blue-600/85 text-white px-4 py-4 rounded-2xl border border-white/20 shadow-lg hover:bg-blue-600/95 transition"
                             onClick={convert}
                         >
                             Convert {from.toUpperCase()} to {to.toUpperCase()}

@@ -11,13 +11,13 @@ function InputBox({
     className = "",
 }) {
     return (
-        <div className={`bg-white p-3 rounded-lg text-sm flex `}>
+        <div className={`bg-white p-6 rounded-2xl shadow-sm flex ${className}`}>
             <div className="w-1/2">
-                <label  className="text-black/40 mb-2 inline-block">
+                <label className="text-black/40 text-xl font-medium inline-block">
                     {label}
                 </label>
                 <input
-                    className="outline-none w-full bg-transparent py-1.5"
+                    className="mt-4 outline-none w-full bg-transparent text-3xl font-semibold text-black placeholder:text-black/25"
                     type="number"
                     placeholder="Amount"
                     disabled={amountDisable} // the disabled attribute is a boolean property used to make an <input> element non-interactive
@@ -26,10 +26,10 @@ function InputBox({
                     // many times JS take values of events in string format that's why we converted into a number 
                 />
             </div>
-            <div className="w-1/2 flex flex-wrap justify-end text-right">
-                <p className="text-black/40 mb-2 w-full">Currency Type</p>
+            <div className="w-1/2 flex flex-col items-end text-right">
+                <p className="text-black/40 text-xl font-medium">Currency Type</p>
                 <select
-                    className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
+                    className="mt-4 rounded-xl px-4 py-2 bg-gray-100 cursor-pointer outline-none text-2xl font-semibold text-black"
                     value={selectCurrency}
                     onChange={(e)=>onCurrencyChange && onCurrencyChange(e.target.value)} // we don't nedd currency info in numbers that's why we didn't converted it
                     disabled={currencyDisable}
