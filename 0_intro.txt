@@ -18,3 +18,5 @@ conventions -
 
 1. name all the functions and their file starting from capital letter 
 2. JS files which return HTML should be named by .jsx extension
+
+rafce - gives template for basic jsx file
