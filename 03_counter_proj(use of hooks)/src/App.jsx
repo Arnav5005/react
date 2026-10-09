@@ -14,7 +14,7 @@ function App() {
   // When you call:
 
   // const [counter, setCounter] = useState(5)
-  // React creates an internal “state slot” for counter and gives you a setter (setCounter) that      knows how to update that slot.
+  // React creates an internal “state slot” for counter and gives you a setter (setCounter) that knows how to update that slot.
 
   // setCounter accepts either:
 
